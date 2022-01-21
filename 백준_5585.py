@@ -1,4 +1,5 @@
 N = 1000 - int(input())
+
 result = 0
 
 result += N // 500
