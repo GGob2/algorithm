@@ -1,11 +1,27 @@
-n, m, b = map(int, input().split())
+import sys
+n, m, b = map(int, sys.stdin.readline().split())
 
-result = []
 
-for i in range(n):
-    temp = list(map(int, input().split()))
-    result.append(temp)
+table = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
 
-count = 0
+height = 0
+ans = 1000000000000000000000000000000
 
-print(result)
+for i in range(257):
+    max = 0
+    min = 0
+    for j in range(n):
+        for k in range(m):
+            if table[j][k] < i:
+                min += (i - table[j][k])
+            else:
+                max += (table[j][k] - i)
+    inven = max + b
+    if inven < min:
+        continue
+
+    time = 2 * max + min
+    if time <= ans:
+        ans = time
+        height = i
+print(ans, height)
