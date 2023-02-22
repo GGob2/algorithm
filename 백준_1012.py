@@ -9,7 +9,7 @@ dx, dy = [-1,1,0,0], [0,0,-1,1]
 
 def bfs(graph, a, b):    
     queue = deque()
-    queue.append(a, b)
+    queue.append((a, b))
     graph[a][b] = 0
     
     while queue:
