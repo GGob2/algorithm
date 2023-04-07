@@ -17,6 +17,6 @@ for coin in coins:
         min_coin[k] = min(min_coin[k], min_coin[k-coin]+1)
 
 if min_coin[k] == 10001:
-    print(0)
+    print(-1)
 else:
     print(min_coin[k])
