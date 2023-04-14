@@ -16,3 +16,4 @@ def solution(n, computers):
                         visit.append(j)
                         queue.append(j)
     return answer
+
