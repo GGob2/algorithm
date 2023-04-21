@@ -11,17 +11,19 @@ for i in range(n):
 
 def back(start, now, value, count):
     global ans
-
+    
+    # 함수 종료 조건
     if count == n:
         if price_list[now][start]:
             value += price_list[now][start]
             if ans > value: 
                 ans = value
         return
-    
+    # 함수 종료 조건 
     if value > ans:         # 이미 경로 크기가 커져버린 경우
         return
     
+    # 종료가 아닐 경우 수행할 코드
     for i in range(n):
         if not visit[i] and price_list[now][i]:
             visit[i] = 1
