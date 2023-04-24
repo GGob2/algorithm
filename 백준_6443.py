@@ -2,17 +2,16 @@ import sys
 input = sys.stdin.readline
 
 def back(cnt):
-    
+    print(cnt, ans)
     if cnt == len(string):
         print("".join(ans))
         return
-
     for k in visit:
-        if visit[k] :
-            visit[k] -= 1   
+        if visit[k] :   # 딕셔너리에 값이 있으면
+            visit[k] -= 1   # 빼고, ans에 추가
             ans.append(k)
             
-            back(cnt+1)
+            back(cnt+1)     # 재귀
             
             visit[k] += 1
             ans.pop()
