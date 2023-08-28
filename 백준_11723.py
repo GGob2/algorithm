@@ -1,21 +1,22 @@
 import sys
 n = int(sys.stdin.readline())
 
-result = []
-result_v2 = [str(i)for i in range(1, 21)]
+result = set()
 
 for i in range(n):
     command_line = sys.stdin.readline().split()
-    
     command = command_line[0]
+
     if len(command_line) > 1:
-        num = command_line[1]
+        num = int(command_line[1])
 
     if command == "add":
+        if num not in result:
+            result.add(num)
+    
+    if command == "remove":
         if num in result:
-            pass
-        else:
-            result.append(num)
+            result.discard(num)
     
     if command == "check":
         if num in result:
@@ -23,25 +24,14 @@ for i in range(n):
         else:
             print(0)
     
-    if command == "remove":
-        if num in result:
-            result.remove(num)
-        else:
-            pass
-    
     if command == "toggle":
         if num in result:
-            result.remove(num)
+            result.discard(num)
         else:
-            result.append(num)
+            result.add(num)
     
     if command == "all":
-        result = result_v2
+        result = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20}
     
     if command == "empty":
-        result = []
-
-
-
-    
-
+        result = set()
