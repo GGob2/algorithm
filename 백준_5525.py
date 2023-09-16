@@ -5,7 +5,6 @@ input = sys.stdin.readline
 n = int(input())
 m = int(input())
 
-
 s = input().rstrip()
 
 find = n * "IO" + "I"
