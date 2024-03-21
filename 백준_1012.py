@@ -5,11 +5,11 @@ input = sys.stdin.readline
 
 T = int(input())
 
-dx, dy = [-1,1,0,0], [0,0,-1,1]
+dx, dy = [-1,1,0,0], [0,0,-1,1]     # 상하좌우
 
-def bfs(graph, a, b):    
+def bfs(graph, a, b):               # 현재 x, y 좌표, 맵
     queue = deque()
-    queue.append((a, b))
+    queue.append((a, b))            # 현재 좌표
     graph[a][b] = 0
     
     while queue:

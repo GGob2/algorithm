@@ -1,9 +1,9 @@
 import sys
 input = sys.stdin.readline
 
-T = int(input())
+T = int(input())        # 입력값 받음
 
-zero = [1,0,1]
+zero = [1,0,1]          # 초기값 설정 
 one = [0,1,1]
 
 def fibo(num):

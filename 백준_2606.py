@@ -1,13 +1,13 @@
 n = int(input())
 m = int(input())
 
-s = [[0] * n for i in range(n)] 
+s = [[0] * n for i in range(n)]  # 간선 설정
 v = [0 for i in range(n)]
 
 
 for i in range(m):
     a, b = map(int, input().split())
-    s[a-1][b-1] = 1
+    s[a-1][b-1] = 1              # 서로 간선 설정 
     s[b-1][a-1] = 1
 
 def dfs(k):
