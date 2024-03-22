@@ -27,9 +27,3 @@ for i in range(n-1):
 
 dfs(1)
 print((lambda a, b : max(a, b))(dp[1][1], dp[1][0]))                      # dp[1]을 수행했으니, dp중 큰 값 출력 
-
-
-
-
-                  
-
